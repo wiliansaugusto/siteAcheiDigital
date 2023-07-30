@@ -1,0 +1,75 @@
+.nav{
+    min-width: 100vw;
+    min-height: 70px;
+    background-color: #0000ff;
+    display: block;
+    position: relative;
+    z-index: 2;
+    height: auto;
+    padding: 15px;
+
+    
+}
+.body{
+    min-height: 100vh;
+    padding: 10px;
+}
+.navBtnDiv{
+    display: block;
+    position: fixed;
+    z-index: 3;
+    top: 10px;
+    right: 15px;    
+    color: rgb(3, 4, 5);
+}
+.btnNav{
+    color: white;
+    background-color: #0000ff;
+    display: flex;
+    align-items: center;
+}
+.footer{
+    background-color: black;
+    color:wheat;
+    display: flex;
+    flex-direction: row;
+    align-items: first safe ;
+    justify-content: end;
+    padding-top: 15px;
+    padding-right: 15px;
+    
+}
+.conteudo{
+    min-width: 45%;
+    max-width: 70%;
+    background-color: #0000ff;
+    color: aliceblue;
+}
+.conteudo h2{
+    text-align: center;
+    margin-top: 15px;
+}
+.links{
+    padding: 15px;  ;  
+}
+.link a{
+    color: rgb(255, 255,255) ;
+    text-decoration: none;
+    display: flex;
+    justify-content: safe space-around;
+    align-items: center;
+    margin-right: 30px;
+    padding-left: 45px;
+}
+.link a:hover{
+    margin:0 ;
+    color: rgb(255, 209, 3);
+    font-size: large;
+}
+.footer mat-icon{
+    margin-right: 5px;
+}
+.footer {
+    text-decoration: none;
+    color:wheat
+}
