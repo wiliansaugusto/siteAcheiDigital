@@ -45,4 +45,20 @@
     <p>Desenvolvido por Sites Achei Digital</p></a>
 
   </div>
+  <div id="cookies" *ngIf="showValueDiv" >
+    
+    <ngb-alert  type="primary"  type="success" [dismissible]="false">
+  
+        <p>Aviso</p>
+        <p>Nós e os terceiros selecionados usamos cookies ou tecnologias similares para finalidades técnicas e, com seu consentimento, para outras finalidades. Negar consentimento pode tornar as funcionalidades relacionadas indisponíveis.
+        Você pode livremente dar, negar ou retirar seu consentimento a qualquer momento.
+        Use o botão “Aceitar” para consentir.</p>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: baseline;">
+        <a style="font-size: medium;" href="http://sites.achei.digital/politicadeprivacidade.html" target="_blank" rel="noopener noreferrer"> Ver Politica de privacidade</a>
+        <button type="button" (click)="setPopUp()" class="btn btn-sm btn-primary" data-bs-dismiss="alert" aria-label="Close">Aceitar</button>
+   
+      </div>
+    </ngb-alert>
+   
+</div>
  </footer>

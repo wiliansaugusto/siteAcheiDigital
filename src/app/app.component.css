@@ -82,3 +82,12 @@
     text-decoration: none;
     color:wheat
 }
+#cookies{
+    height: max-content;
+    width: 100%;
+    margin: 0;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
