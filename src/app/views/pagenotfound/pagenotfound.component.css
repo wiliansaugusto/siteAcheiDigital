@@ -1,0 +1,15 @@
+.corpo{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 10%;
+    color: aliceblue;
+}
+
+@media screen and (max-width:500px) {
+    .corpo{
+        margin-top: 35%;
+
+    }
+}

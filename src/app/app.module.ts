@@ -9,6 +9,8 @@ import { HomeComponent } from './views/home/home.component';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button'; 
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatInputModule} from '@angular/material/input'; 
 
 
 import { WilliansComponent } from './views/willians/willians.component';
@@ -42,7 +44,9 @@ import { FerramentasComponent } from './views/ferramentas/ferramentas.component'
     NgbModule,
     MatSidenavModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

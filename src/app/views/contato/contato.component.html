@@ -1,1 +1,38 @@
-<p>contato works!</p>
+<div class="row contato">
+    <h3>Contato</h3>
+    <div id="contato" class="col-lg-12 col-sm-12">
+        <div class="icones">
+            <a href="https://www.instagram.com/acheidigital013/" target="_blank" rel="_blank">
+                <img class="img-fliud" src="../assets/img/instagram-icon.png" alt="Instagram Achei Digital" >
+            </a>
+            <a href="mailto:atendimento@achei.digital" target="_blank">
+                <img  class="img-fliud"src="../assets/img/Email-Logo.png" alt="Email Sites Achei Digital"></a>
+            <a href="https://api.whatsapp.com/send?phone=551338771637&text=Olá%20eu%20gostaria%20de%20um%20orçamento%20para%20criar%20um%20site" target="_blank">
+                <img class="img-fliud" src="../../../assets/img/whats.png" alt="whatsapp Achei Digital"></a>
+    
+        </div>
+        <form  action="https://formsubmit.co/atendimento@achei.digital" method="POST">
+            <div class="formulario" >
+            <p>Envie uma mensagem, iremos responder assim que possivel</p>
+            <mat-form-field appearance="fill">
+                <mat-label> <mat-icon>person</mat-icon> Nome</mat-label>
+                <input required matInput name="name" type="text" formControlName="name" >
+            </mat-form-field>
+        
+            <mat-form-field appearance="fill">
+                <mat-label> <mat-icon>email</mat-icon> Email</mat-label>
+                <input required matInput name="email" type="email" formControlName="email" >
+            </mat-form-field>
+           
+            <mat-form-field appearance="fill">
+                <mat-label> <mat-icon>description</mat-icon> Mensagem</mat-label>
+                <textarea formControlName="mensagem" name="mensagem" matInput></textarea>
+            </mat-form-field>
+            <input type="hidden" name="_subject" value="Contato recebido pelo site">
+            <input type="hidden" name="_next" value="http://localhost:4200">
+            <input type="hidden" name="_captcha" value="false">
+            <button  type="submit" class="btn btn-primary btn-block">Enviar</button>
+            </div>
+        </form> 
+    </div>
+</div>

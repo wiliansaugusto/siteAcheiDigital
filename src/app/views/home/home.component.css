@@ -1,0 +1,23 @@
+.entrada{
+    background-image: url() ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+
+}
+
+.kenburns-left {
+	animation: kenburns-left 5s ease-out both;
+}
+
+ @keyframes kenburns-left {
+    0% {
+      transform: scale(1) translate(0, 0);
+      transform-origin: 16% 50%;
+    }
+    100% {
+      transform: scale(1.25) translate(-20px, 15px);
+      transform-origin: left;
+    }
+  }
+  
