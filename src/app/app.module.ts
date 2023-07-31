@@ -21,7 +21,8 @@ import { ParceirosComponent } from './views/parceiros/parceiros.component';
 import { LinksComponent } from './views/links/links.component';
 import { PoliticaComponent } from './views/politica/politica.component';
 import { PagenotfoundComponent } from './views/pagenotfound/pagenotfound.component';
-import { FerramentasComponent } from './views/ferramentas/ferramentas.component'; 
+import { FerramentasComponent } from './views/ferramentas/ferramentas.component';
+import { ConstrucaoComponent } from './views/construcao/construcao.component'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FerramentasComponent } from './views/ferramentas/ferramentas.component'
     LinksComponent,
     PoliticaComponent,
     PagenotfoundComponent,
-    FerramentasComponent
+    FerramentasComponent,
+    ConstrucaoComponent
   ],
   imports: [
     BrowserModule,

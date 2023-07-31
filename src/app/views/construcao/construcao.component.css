@@ -1,0 +1,29 @@
+.borda{
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background: #D1D8EC;
+    -webkit-box-shadow: 24px 24px 19px #9da2b1, -24px -24px 19px #ffffff;
+    box-shadow: 24px 24px 19px #9da2b1, -24px -24px 19px #ffffff;
+    margin-top: 35px;
+    margin-bottom: 45px;
+
+    
+}
+.organizacao{
+    color: white;
+    text-align: center;
+
+    
+}
+video{
+    width: 50vw;
+   
+}
+
+
+@media screen and (max-width:500px){
+    video{
+        width: 70vw;
+       
+    }
+}

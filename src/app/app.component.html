@@ -9,23 +9,23 @@
   
 </div>
   <mat-drawer-container  class="example-container"  >
-    <mat-drawer class="conteudo" #drawer mode="over" [opened]="false" >
+    <mat-drawer class="conteudo" #drawer mode="over"  >
       <h2>Menu</h2>
       <hr>
       <div class="links">
-        <p class="link"><a routerLink=""><mat-icon>home</mat-icon> Home</a></p>
-        <p class="link"><a routerLink="quemsomos"><mat-icon>diversity_3</mat-icon> Quem Somos</a></p>
-        <p class="link"><a routerLink="contato"><mat-icon>support_agent</mat-icon> Contato</a></p>
-        <p class="link"><a routerLink="ferramentas"><mat-icon>handyman</mat-icon> Ferramentas</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink=""><mat-icon>home</mat-icon> Home</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink="quemsomos"><mat-icon>diversity_3</mat-icon> Quem Somos</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink="contato"><mat-icon>support_agent</mat-icon> Contato</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink="ferramentas"><mat-icon>handyman</mat-icon> Ferramentas</a></p>
 
         <h5>Nossa Equipe</h5>
-        <p class="link"><a routerLink="williansaugusto"><mat-icon>self_improvement</mat-icon>Willians Augusto</a></p>
-        <p class="link"><a routerLink="pedrohenrique"><mat-icon>emoji_people</mat-icon>Pedro Henrique</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink="williansaugusto"><mat-icon>self_improvement</mat-icon>Willians Augusto</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink="pedrohenrique"><mat-icon>emoji_people</mat-icon>Pedro Henrique</a></p>
         
         <h5>Parceiros</h5>
-        <p class="link"><a routerLink="parceiros"><mat-icon>diversity_2</mat-icon>Parceiros</a></p>        
+        <p class="link" (click)="drawer.toggle()"><a routerLink="parceiros"><mat-icon>diversity_2</mat-icon>Parceiros</a></p>        
         <br><hr>
-        <p class="link"><a routerLink="politicadosite"><mat-icon>emoji_people</mat-icon>Politica de privacidade</a></p>
+        <p class="link" (click)="drawer.toggle()"><a routerLink="politicadosite"><mat-icon>emoji_people</mat-icon>Politica de privacidade</a></p>
 
         <hr>
 

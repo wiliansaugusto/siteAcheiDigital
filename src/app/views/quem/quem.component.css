@@ -3,21 +3,16 @@
     padding: 15px;
     text-align: justify;
 }
-.quem{
-    background-image: url("../../../assets/img/imagem1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 70vh;
+
+.imagem{
+    height: 40vh;
+    margin-left: 35%;
 }
-.quem2{
-    background-image: url("../../../assets/img/images.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 70vh;
-}
-.quem3{
-    background-image: url("../../../assets/img/images2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 70vh;
+
+
+@media screen and (max-width:500px){
+    .imagem{
+        height: 40vh;
+        margin-left:0;
+    }
 }
