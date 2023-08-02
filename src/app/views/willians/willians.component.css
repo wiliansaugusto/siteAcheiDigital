@@ -1,0 +1,97 @@
+p,
+li {
+    color: antiquewhite;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.caixa {
+    background-color: azure;
+    width: 100%;
+    padding: 25px;
+}
+
+svg {
+    fill: #ffd700;
+    width: 3vw;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+
+}
+
+.imgTamanho {
+    height: 50vh;
+
+}
+
+.imgPerfil {
+    min-width: 25vw;
+
+}
+
+.picsum-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #ffd700;
+}
+
+a:hover {
+    color: blanchedalmond;
+}
+.redescosiais{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rede{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 500px) {
+    .perfil {
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .imgTamanho {
+        width: 100vh;
+
+    }
+
+    svg {
+        width: 10vw;
+    }
+    .redescosiais{
+        flex-direction:column;
+        justify-content: space-around;
+    }
+    .rede{
+        flex-direction:row;
+        justify-content: start;
+        margin-top: 25px;
+
+    }
+    .imgPerfil{
+        min-height: 65vh;
+    }
+}

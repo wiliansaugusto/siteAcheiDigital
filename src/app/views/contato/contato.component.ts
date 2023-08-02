@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contato',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class ContatoComponent {
 
+  contato;
+  textWhats: Array<any> = [];
+  public constructor(private formBuilder: FormBuilder) {
+    this.contato = this.formBuilder.group({
+      name:[''],
+      mensagem:[''],
+      email:['']
+    })
+
+}
 }

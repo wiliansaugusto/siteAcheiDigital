@@ -1,2 +1,119 @@
-<p>ferramentas works!</p>
-<app-construcao></app-construcao>
+<div class="row">
+    <div class="col-sm-12 col-lg-6">
+        <div class="card">
+            <div class="header">
+                <div class="card-title">
+                    <h3>Gerador de links Whatsapp</h3>
+                </div>
+                <div class="card-body">
+                    <p>Você pode gerar os links do Whatsapp basta informar o seu numero de telefone com o código de área
+                        sem o
+                        0(zero)</p>
+                    <p>Exemplo: 1399774840</p>
+                    <p>Se o desejar poderá incluir uma mensagem, depois disso basta colar o link aonde deseja!</p>
+                    <div>
+                        <form class="formulario" [formGroup]="formWhats" (ngSubmit)="respostaWhats()">
+                            <mat-form-field appearance="fill">
+                                <mat-label> <mat-icon>phone_android</mat-icon> Numero de telefone</mat-label>
+                                <input matInput name="telNumber" type="text" name="telNumber" formControlName="telNumber">
+                            </mat-form-field>
+    
+                            <mat-form-field appearance="fill">
+                                <mat-label> <mat-icon>person</mat-icon> Mensagem</mat-label>
+                                <input matInput type="text" name="mensagem" formControlName="mensagem">
+                            </mat-form-field>
+                            <button class="btn btn-primary btn-block" type="submit">Gerar Link</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card-action">
+                    <div *ngIf="textWhats.length > 0">
+                        <h4>Whatsapp links</h4>
+                        <ul *ngFor=" let whats of textWhats ">
+                            <li>
+                                <a href="{{whats}}" target="_blank" rel="noopener noreferrer">{{whats}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-6">
+        <div class="card">
+            <div class="header">
+                <div class="card-title">
+
+                    <h3>Encurtador de link</h3>
+                </div>
+                <div class="card-body">
+
+                    <p>Você pode encurtar os links para ficar mais facil de compartilhar</p>
+                    <p>Os links gerados não serão salvos!!!</p>
+                    <div>
+                        <form class="formulario" [formGroup]="formURL" (ngSubmit)="encurtarUrl()">
+                            <mat-form-field appearance="fill">
+                                <mat-label> <mat-icon>web</mat-icon> Nome do site</mat-label>
+                                <input matInput name="nomeDoSite" type="text"  formControlName="nomeDoSite">
+                            </mat-form-field>
+    
+                            <mat-form-field appearance="fill">
+                                <mat-label> <mat-icon>language</mat-icon> URL do site</mat-label>
+                                <input matInput type="text" name="url" formControlName="url">
+                            </mat-form-field>
+                            <button class="btn btn-primary btn-block" type="submit">Gerar Link</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-action">
+                       <div *ngIf="textUrls.length > 0">
+                        <h4>Links Encurtados</h4>
+                        <ul *ngFor=" let text of textUrls ">
+                            <li>
+                                <p>{{text.nomesite}}</p>
+                                <a href="{{text.url}}" target="_blank" rel="noopener noreferrer">{{text.url}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-lg-6">
+        <div class="card">
+            <div class="header">
+                <div class="card-title">
+                    <h3>Gerador de QRCode</h3>
+                </div>
+                <div class="card-body">
+                    <p>Aqui voce pode colocar os dados que desejar, se voce inserir mailto:seuemail@email.com.br ele
+                        abrirar o email, se colocar <strong> tel:+5511999999999 </strong>abrirá o discador do telefone
+                        ou
+                        copiar e colar um link</p>
+                    <form class="formulario" [formGroup]="formQrcode" (ngSubmit)="gerarQrcode()">
+                        <mat-form-field appearance="fill">
+                            <mat-label> <mat-icon>qr_code_2</mat-icon> Contuedo do QRCode</mat-label>
+                            <input matInput name="conteudoQrcode" type="text" name="conteudoQrcode"
+                                formControlName="conteudoQrcode">
+                        </mat-form-field>
+
+                        <button class="btn btn-primary btn-block" type="submit">Gerar QrCode</button>
+                    </form>
+                </div>
+                <div class="card-action">
+                    <div class="qrcodeImage" *ngIf="myAngularxQrCode">
+                        <h4>QRCode Gerado</h4>
+                        <qrcode [qrdata]="myAngularxQrCode" [allowEmptyString]="true" [alt]="'A custom alt attribute'"
+                            [ariaLabel]="'QR Code image with the following content...'" [cssClass]="'center'"
+                            [colorDark]="'#000000ff'" [colorLight]="'#ffffffff'" [elementType]="'img'"
+                            [errorCorrectionLevel]="'Q'" [margin]="4" [scale]="1" [width]="300"></qrcode>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6"></div>
+    </div>
