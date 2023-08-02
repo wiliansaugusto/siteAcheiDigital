@@ -1,0 +1,35 @@
+figcaption{
+    color: aliceblue;
+    
+}
+h2,h3,p{
+    color: aliceblue;
+    text-align: justify;
+    padding: 5px;
+}
+.site{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.row{
+    margin-top: 15px;
+}
+.btn-parceiro{
+    background-color: goldenrod;
+    color: aliceblue;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.card-body p{
+    color:black
+}
+.imgparceiro{
+    width: 80%;
+    margin-left: 9%;
+}
+.card{
+    margin-top: 15px;
+}

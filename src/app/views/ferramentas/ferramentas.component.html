@@ -72,7 +72,7 @@
                         <ul *ngFor=" let text of textUrls ">
                             <li>
                                 <p>{{text.nomesite}}</p>
-                                <a href="{{text.url}}" target="_blank" rel="noopener noreferrer">{{text.url}}</a>
+                                <a href="https://{{text.url}}" target="_blank" rel="noopener noreferrer">{{text.url}}</a>
                             </li>
                         </ul>
                     </div>
@@ -96,7 +96,7 @@
                         copiar e colar um link</p>
                     <form class="formulario" [formGroup]="formQrcode" (ngSubmit)="gerarQrcode()">
                         <mat-form-field appearance="fill">
-                            <mat-label> <mat-icon>qr_code_2</mat-icon> Contuedo do QRCode</mat-label>
+                            <mat-label> <mat-icon>qr_code_2</mat-icon> Conteúdo do QRCode</mat-label>
                             <input matInput name="conteudoQrcode" type="text" name="conteudoQrcode"
                                 formControlName="conteudoQrcode">
                         </mat-form-field>

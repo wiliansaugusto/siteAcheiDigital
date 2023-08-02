@@ -28,11 +28,11 @@ export class FerramentasComponent implements OnInit {
       mensagem: ['']
     })
     this.formQrcode = this.formBuilder.group({
-      conteudoQrcode: ['']
+      conteudoQrcode: ['',Validators.required]
     })
     this.formURL = this.formBuilder.group({
       nomeDoSite: [''],
-      url: ['']
+      url: ['',Validators.required]
     })
 
   }
@@ -58,6 +58,7 @@ export class FerramentasComponent implements OnInit {
   }
 
   gerarQrcode() {
+    if(this.formQrcode.valid)
     this.myAngularxQrCode = this.formQrcode.get("conteudoQrcode")?.value
 
   }
@@ -66,7 +67,7 @@ export class FerramentasComponent implements OnInit {
 
     let objeto = { url: this.formURL.get("url")?.value };
 
-    if (this.formURL.get("url")?.value) {
+    if (this.formURL.valid) {
       this.servico.encurtarLink(objeto).subscribe((resp: any) => {
 
         var salvar = {
