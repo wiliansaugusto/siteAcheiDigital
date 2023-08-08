@@ -1,0 +1,139 @@
+.linha {
+    background-color: #d19c0aa2;
+    color: #000000;
+    padding: 15px;
+    font-size: xx-large;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+}
+
+.imgPerfil {
+    min-width: 25vw;
+}
+
+.imgTamanho {
+    height: 50vh;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: rgb(238, 228, 84);
+    border: var(--bs-border-width) solid rgb(0, 0, 0);
+    border-radius: var(--bs-border-radius);
+    max-width: 100%;
+    height: auto;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+}
+
+.picsum-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img_carrosel {
+    width: 50vw;
+}
+.carousel-item {
+    background-color: red;
+}
+.carousel {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+.carousel-caption {
+    padding: 10px;
+    background-color: #4e4e4e8e;
+    color: antiquewhite;
+}
+.preferencias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+li {
+   display: flex;
+   flex-direction: row; 
+   justify-content: safe start;
+   align-items: center;
+}
+.emoji_filme {
+    fill: darkorange;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 0.5;
+    width: 30px;
+}
+.emoji_jogo {
+    width: 30px;
+}
+.preferencias h5 {
+    text-align: center;
+}
+.linksocial {
+    width: 20vw;
+    padding-bottom: 10px;
+}
+.linksocial svg {
+    width: 50px;
+}
+.linksocial a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pé {
+    width: 100%; 
+    height: 50px;
+    background-color: #000000;
+    font-size: medium;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding: 10px;
+}
+@media screen and (max-width: 500px) {
+    p {
+      background-color: aquamarine;
+    }
+    .perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+  }
