@@ -10,18 +10,20 @@ import { PoliticaComponent } from './views/politica/politica.component';
 import { PagenotfoundComponent } from './views/pagenotfound/pagenotfound.component';
 import { FerramentasComponent } from './views/ferramentas/ferramentas.component';
 import { LinksComponent } from './views/links/links.component';
+import { ConstrucaoComponent } from './views/construcao/construcao.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  {path:'williansaugusto', component:WilliansComponent},
-  {path:'pedrohenrique', component:PedroComponent},
-  {path:'quemsomos', component:QuemComponent},
-  {path:'contato', component:ContatoComponent},
-  {path:'parceiros', component:ParceirosComponent},
-  {path:'politicadosite', component:PoliticaComponent},
-  {path:'ferramentas', component:FerramentasComponent},
-  {path:'link', component:LinksComponent},
-  {path:'**', component:PagenotfoundComponent},
+  { path: '', component: HomeComponent },
+  { path: 'williansaugusto', component: WilliansComponent },
+  { path: 'pedrohenrique', component: PedroComponent },
+  { path: 'quemsomos', component: QuemComponent },
+  { path: 'contato', component: ContatoComponent },
+  { path: 'parceiros', component: ParceirosComponent },
+  { path: 'politicadosite', component: PoliticaComponent },
+  { path: 'ferramentas', component: FerramentasComponent },
+  { path: 'link', component: LinksComponent },
+  { path: 'construcao', component: ConstrucaoComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({

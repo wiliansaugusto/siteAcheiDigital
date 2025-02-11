@@ -1,64 +1,80 @@
 <div class="nav">
   <img class="logo" src="../assets/img/logo.png" alt="logo achei digital sites">
   <div class="navBtnDiv">
-  
-  <button class="btnNav" (click)="drawer.toggle()" mat-icon-button matTooltip="Basic" aria-label="Example icon-button with a heart icon">
-    <mat-icon>menu</mat-icon>
-  </button>
+
+    <button class="btnNav" (click)="drawer.toggle()" mat-icon-button matTooltip="Basic"
+      aria-label="Example icon-button with a heart icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
 </div>
-  
-</div>
-  <mat-drawer-container  class="example-container"  >
-    <mat-drawer class="conteudo" #drawer mode="over"  >
-      <h2>Menu</h2>
+<mat-drawer-container class="example-container">
+  <mat-drawer class="conteudo" #drawer mode="over">
+    <h2>Menu</h2>
+    <hr>
+    <div class="links">
+      <p class="link" (click)="drawer.toggle()"><a routerLink=""><mat-icon>home</mat-icon> Home</a></p>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="quemsomos"><mat-icon>diversity_3</mat-icon> Quem
+          Somos</a></p>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="contato"><mat-icon>support_agent</mat-icon> Contato</a>
+      </p>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="ferramentas"><mat-icon>handyman</mat-icon>
+          Ferramentas</a></p>
+
+      <h5>Nossa Equipe</h5>
+      <p class="link" (click)="drawer.toggle()"><a
+          routerLink="williansaugusto"><mat-icon>emoji_people</mat-icon>Willians Augusto</a></p>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="pedrohenrique"><mat-icon>emoji_people</mat-icon>Pedro
+          Henrique</a></p>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="construcao"><mat-icon>emoji_people</mat-icon>Vitória
+        </a></p>
+
+      <h5>Parceiros</h5>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="parceiros"><mat-icon>diversity_2</mat-icon>Parceiros</a>
+      </p>
+      <br>
       <hr>
-      <div class="links">
-        <p class="link" (click)="drawer.toggle()"><a routerLink=""><mat-icon>home</mat-icon> Home</a></p>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="quemsomos"><mat-icon>diversity_3</mat-icon> Quem Somos</a></p>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="contato"><mat-icon>support_agent</mat-icon> Contato</a></p>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="ferramentas"><mat-icon>handyman</mat-icon> Ferramentas</a></p>
+      <p class="link" (click)="drawer.toggle()"><a routerLink="politicadosite"><mat-icon>emoji_people</mat-icon>Politica
+          de privacidade</a></p>
 
-        <h5>Nossa Equipe</h5>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="williansaugusto"><mat-icon>self_improvement</mat-icon>Willians Augusto</a></p>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="pedrohenrique"><mat-icon>emoji_people</mat-icon>Pedro Henrique</a></p>
-        
-        <h5>Parceiros</h5>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="parceiros"><mat-icon>diversity_2</mat-icon>Parceiros</a></p>        
-        <br><hr>
-        <p class="link" (click)="drawer.toggle()"><a routerLink="politicadosite"><mat-icon>emoji_people</mat-icon>Politica de privacidade</a></p>
-
-        <hr>
+      <hr>
 
 
-      </div>
-    </mat-drawer>
-    <mat-drawer-content >
-      <div class="body">
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="body">
       <router-outlet></router-outlet>
     </div>
-    </mat-drawer-content>
-  </mat-drawer-container>
+  </mat-drawer-content>
+</mat-drawer-container>
 
 <footer>
   <div>
-    <a class="footer" routerLink="" target="_blank"> <mat-icon fontIcon="copyright" ></mat-icon> 
-    <p>Desenvolvido por Sites Achei Digital</p></a>
+    <a class="footer" routerLink="" target="_blank"> <mat-icon fontIcon="copyright"></mat-icon>
+      <p>Desenvolvido por Sites Achei Digital</p>
+    </a>
 
   </div>
-  <div id="cookies" *ngIf="showValueDiv" >
-    
-    <ngb-alert  type="primary"  type="success" [dismissible]="false">
-  
-        <p>Aviso</p>
-        <p>Nós e os terceiros selecionados usamos cookies ou tecnologias similares para finalidades técnicas e, com seu consentimento, para outras finalidades. Negar consentimento pode tornar as funcionalidades relacionadas indisponíveis.
+  <div id="cookies" *ngIf="showValueDiv">
+
+    <ngb-alert type="primary" type="success" [dismissible]="false">
+
+      <p>Aviso</p>
+      <p>Nós e os terceiros selecionados usamos cookies ou tecnologias similares para finalidades técnicas e, com seu
+        consentimento, para outras finalidades. Negar consentimento pode tornar as funcionalidades relacionadas
+        indisponíveis.
         Você pode livremente dar, negar ou retirar seu consentimento a qualquer momento.
         Use o botão “Aceitar” para consentir.</p>
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: baseline;">
-        <a style="font-size: medium;" href="http://sites.achei.digital/politicadeprivacidade.html" target="_blank" rel="noopener noreferrer"> Ver Politica de privacidade</a>
-        <button type="button" (click)="setPopUp()" class="btn btn-sm btn-primary" data-bs-dismiss="alert" aria-label="Close">Aceitar</button>
-   
+      <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: baseline;">
+        <a style="font-size: medium;" href="http://sites.achei.digital/politicadeprivacidade.html" target="_blank"
+          rel="noopener noreferrer"> Ver Politica de privacidade</a>
+        <button type="button" (click)="setPopUp()" class="btn btn-sm btn-primary" data-bs-dismiss="alert"
+          aria-label="Close">Aceitar</button>
+
       </div>
     </ngb-alert>
-   
-</div>
- </footer>
+
+  </div>
+</footer>
