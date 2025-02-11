@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sites",
+            "outputPath": "dist/sites/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -96,6 +96,61 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/sites/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "sites:build:development",
+              "serverTarget": "sites:server:development"
+            },
+            "production": {
+              "browserTarget": "sites:build:production",
+              "serverTarget": "sites:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/",
+              "/quemsomos*",
+              "/williansaugusto"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sites:build:production",
+              "serverTarget": "sites:server:production"
+            },
+            "development": {
+              "browserTarget": "sites:build:development",
+              "serverTarget": "sites:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

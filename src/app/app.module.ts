@@ -46,7 +46,7 @@ import { VitoriaComponent } from './views/vitoria/vitoria.component';
     VitoriaComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
